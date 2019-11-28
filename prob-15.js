@@ -22,8 +22,11 @@ function prob15(stream) {
   return result;
 }
 
+const stream = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+const counter = new Array(stream.length).fill(0)
 
-console.log(prob15([1]))
-console.log(prob15([1, 2]))
-console.log(prob15([1, 2, 3]))
-console.log(prob15([1, 2, 3, 4]))
+for( let i = 0; i < 1000; i++) {
+  let result = prob15(stream)
+  counter[result] += 1
+}
+console.log(counter)
